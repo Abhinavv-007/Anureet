@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anureet Sodhi — Creative Designer Portfolio</title>
+  <meta name="description" content="Anureet Sodhi's Creative Design Portfolio — Melbourne-based Creative Designer & Visual Brand Strategist crafting visual identities, UI/UX, editorial design, and brand experiences.">
+  <meta name="keywords" content="Anureet Sodhi, Creative Designer, Visual Designer, Brand Identity, UI UX Design, Melbourne Designer, Graphic Design Portfolio">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Anureet Sodhi — Creative Designer Portfolio">
+  <meta property="og:description" content="Creative Designer & Visual Brand Strategist based in Melbourne, Australia.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond, Prata, Playfair Display, Caveat, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Prata&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Scrapbook Details -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* =========================================================
+       Anureet Sodhi — Creative Designer Portfolio
+       Scrapbook / vision-board inspired personal site
+       ========================================================= */
+
+    :root {
+      --cream: #faf3ee;
+      --paper: #fffaf6;
+      --blush: #f3c9d4;
+      --blush-deep: #e2a1b3;
+      --rose: #c9748c;
+      --ink: #372b2e;
+      --ink-soft: #6b585d;
+      --accent: #b3536c;
+      --line: #e9d6da;
+      --shadow: 0 18px 40px -20px rgba(140, 70, 90, 0.35);
+      
+      /* Typography */
+      --font-display: 'Cormorant Garamond', 'Prata', 'Playfair Display', Georgia, serif;
+      --font-body: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      --font-handwrite: 'Caveat', cursive;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .script {
+      font-family: var(--font-display);
+      color: var(--rose);
+      line-height: 1;
+    }
+
+    .handwrite {
+      font-family: var(--font-handwrite);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ---------- background paper texture & floating scrapbook elements ---------- */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(243,201,212,0.35), transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(243,201,212,0.25), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(243,201,212,0.3), transparent 45%),
+        linear-gradient(to right, rgba(233, 214, 218, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(233, 214, 218, 0.15) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+    }
+
+    /* Decorative scrapbook stamp on corner */
+    .stamp-bg {
+      position: absolute;
+      top: 20px;
+      right: 5%;
+      font-family: var(--font-handwrite);
+      border: 2px dashed var(--blush-deep);
+      padding: 6px 14px;
+      transform: rotate(8deg);
+      color: var(--rose);
+      font-size: 16px;
+      border-radius: 4px;
+      pointer-events: none;
+      opacity: 0.85;
+      background: rgba(255, 250, 246, 0.6);
+    }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(250, 243, 238, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.3s ease, padding 0.3s ease;
+    }
+
+    .nav.scrolled {
+      padding: 14px 40px;
+      box-shadow: 0 4px 20px rgba(140, 70, 90, 0.08);
+    }
+
+    /* Highly readable yet elegant display font for "Anureet Sodhi" */
+    .nav .brand {
+      font-family: var(--font-display);
+      font-size: 30px;
+      color: var(--rose);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      line-height: 1;
+      text-transform: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav .brand:hover {
+      color: var(--accent);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: var(--rose);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ---------- HERO / VISION BOARD ---------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 40px 80px;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text .eyebrow {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-text .eyebrow i {
+      font-size: 11px;
+    }
+
+    /* Readability & Elegance for Hero Main Title */
+    .hero-text h1 {
+      font-family: var(--font-display);
+      font-size: 78px;
+      color: var(--rose);
+      margin: 0 0 12px 0;
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .hero-text .tagline {
+      font-size: 17px;
+      color: var(--ink-soft);
+      max-width: 440px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: var(--shadow);
+      transition: all 0.25s ease;
+      font-weight: 600;
+    }
+    
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      background: var(--accent);
+      box-shadow: 0 22px 35px -15px rgba(179, 83, 108, 0.45);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo {
+      width: 310px;
+      height: 390px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 8px solid var(--paper);
+      transform: rotate(-3deg);
+      background: linear-gradient(135deg, var(--blush), var(--paper));
+      position: relative;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .hero-photo:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    /* Decorative polaroid label */
+    .hero-photo::after {
+      content: "Anureet Sodhi ★ Creative Designer";
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: var(--font-handwrite);
+      font-size: 18px;
+      color: var(--ink-soft);
+      background: rgba(255, 250, 246, 0.94);
+      padding: 4px 0;
+    }
+
+    .hero-photo-img {
+      width: 100%;
+      height: calc(100% - 32px);
+      object-fit: cover;
+      display: block;
+    }
+
+    /* scattered doodle labels */
+    .doodle {
+      position: absolute;
+      font-family: var(--font-handwrite);
+      font-size: 22px;
+      color: var(--ink);
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .doodle.d1 { top: 4%;  left: -4%; transform: rotate(-8deg); }
+    .doodle.d2 { top: 12%; right: -2%; transform: rotate(6deg); }
+    .doodle.d3 { top: 48%; left: -6%; transform: rotate(-4deg); }
+    .doodle.d4 { bottom: 18%; left: 2%; transform: rotate(5deg); }
+    .doodle.d5 { bottom: 6%; right: -4%; transform: rotate(-6deg); }
+    .doodle.d6 { top: 72%; right: -6%; transform: rotate(4deg); }
+
+    .doodle-arrow {
+      position: absolute;
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    /* ---------- SECTION SHELL ---------- */
+    section.page-section {
+      padding: 110px 0 90px;
+      position: relative;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-head .kicker {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: 54px;
+      color: var(--rose);
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .section-head .sub {
+      font-family: var(--font-handwrite);
+      font-size: 22px;
+      color: var(--ink-soft);
+      margin-top: 6px;
+    }
+
+    /* ---------- INDEX / FOLDERS ---------- */
+    .index-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .folder {
+      --folder-color: var(--blush);
+      width: 160px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+    
+    .folder:hover {
+      transform: translateY(-8px) rotate(-2deg);
+      filter: brightness(1.03);
+    }
+
+    .folder-icon {
+      position: relative;
+      width: 140px;
+      height: 102px;
+      margin: 0 auto 12px;
+    }
+
+    .folder-icon .tab {
+      position: absolute;
+      top: 0;
+      left: 8px;
+      width: 60px;
+      height: 20px;
+      background: var(--folder-color);
+      border-radius: 8px 8px 0 0;
+    }
+
+    .folder-icon .body {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 140px;
+      height: 88px;
+      background: var(--folder-color);
+      border-radius: 4px 12px 12px 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .folder-label {
+      font-size: 13.5px;
+      letter-spacing: 0.5px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Color variations for folders */
+    .folder.f-edu { --folder-color: #f3c9d4; }
+    .folder.f-work { --folder-color: #e2a1b3; }
+    .folder.f-skills { --folder-color: #c9748c; }
+    .folder.f-tools { --folder-color: #b3536c; }
+    .folder.f-contact { --folder-color: #6b585d; }
+
+    /* ---------- EDUCATION ---------- */
+    .edu-cards {
+      display: grid;
+      gap: 26px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .edu-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: transform 0.25s ease;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .tape {
+      position: absolute;
+      top: -12px;
+      left: 34px;
+      width: 76px;
+      height: 24px;
+      background: rgba(243, 201, 212, 0.75);
+      border: 1px dashed rgba(201,116,140,0.5);
+      transform: rotate(-4deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .tape.right {
+      left: auto;
+      right: 34px;
+      transform: rotate(3deg);
+    }
+
+    .edu-card .when {
+      font-family: var(--font-handwrite);
+      font-size: 20px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .edu-card h3 {
+      margin: 4px 0 6px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--ink);
+    }
+
+    .edu-card p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .cert-card {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 14px;
+      padding: 28px 32px;
+      box-shadow: var(--shadow);
+    }
+    
+    .cert-card .when { color: var(--blush); }
+    .cert-card p { color: #e5d8db; }
+    .cert-card h3 { color: var(--paper); }
+    
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    
+    .cert-badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(243, 201, 212, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ---------- AGENCY WORK ---------- */
+    .binder-title {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      position: relative;
+    }
+
+    .binder-title::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cream);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .binder-title .label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    .binder-title .role {
+      font-family: var(--font-display);
+      font-size: 26px;
+      margin-top: 4px;
+      color: var(--rose);
+      font-weight: 600;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    @media (max-width: 760px) {
+      .case-grid { grid-template-columns: 1fr; }
+    }
+
+    .case-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 45px -15px rgba(140, 70, 90, 0.4);
+    }
+
+    .case-photo {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blush), var(--paper));
+      position: relative;
+    }
+
+    .case-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .case-card:hover .case-photo img {
+      transform: scale(1.04);
+    }
+
+    .case-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(55, 43, 46, 0.45), transparent 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      color: #fff;
+      font-family: var(--font-handwrite);
+      font-size: 20px;
+    }
+
+    .case-body {
+      padding: 24px 26px 28px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-chip {
+      display: inline-block;
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+    
+    .brand-chip.alt { background: var(--accent); }
+    .brand-chip.gold { background: #c28842; }
+
+    .case-body h4 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      margin: 0 0 10px 0;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .case-body p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin: 0 0 14px 0;
+      line-height: 1.6;
+    }
+
+    .case-body ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    .case-body ul li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .case-metrics {
+      display: flex;
+      gap: 16px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .metric-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--rose);
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) { .skills-grid { grid-template-columns: 1fr; } }
+
+    .skills-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .skills-card h3 {
+      font-family: var(--font-display);
+      color: var(--accent);
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--line);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-card ul { list-style: none; margin: 0; padding: 0; }
+    
+    .skills-card li {
+      font-size: 14.5px;
+      padding: 10px 0;
+      border-bottom: 1px dotted var(--line);
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skills-card li i {
+      color: var(--rose);
+      font-size: 13px;
+    }
+
+    .skills-card li:last-child { border-bottom: none; }
+
+    .applied-note {
+      max-width: 820px;
+      margin: 36px auto 0;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 14px;
+      padding: 24px 30px;
+      font-family: var(--font-handwrite);
+      font-size: 23px;
+      line-height: 1.5;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .applied-note i {
+      color: var(--blush);
+      margin: 0 6px;
+    }
+
+    /* ---------- TOOLKIT ---------- */
+    .tool-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tool-stamp {
+      width: 156px;
+      text-align: center;
+      background: var(--paper);
+      border: 1.5px dashed var(--blush-deep);
+      border-radius: 14px;
+      padding: 24px 14px;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+
+    .tool-stamp:hover {
+      transform: translateY(-5px) rotate(1.5deg);
+      border-color: var(--rose);
+      box-shadow: var(--shadow);
+    }
+
+    .tool-stamp .badge {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      color: var(--accent);
+      font-size: 20px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .tool-stamp .name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .tool-stamp .desc {
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-section {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 110px 0 90px;
+      position: relative;
+    }
+
+    .contact-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+      padding: 0 32px;
+    }
+
+    @media (max-width: 760px) {
+      .contact-inner { grid-template-columns: 1fr; text-align: center; }
+    }
+
+    .contact-photo {
+      width: 270px;
+      height: 340px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 8px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      margin: 0 auto;
+      background: var(--blush);
+      position: relative;
+      transform: rotate(2deg);
+    }
+
+    .contact-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-text .script-lg {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--blush);
+      margin-bottom: 16px;
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    .contact-text p.intro {
+      font-size: 16px;
+      color: #e5d8db;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .contact-folders {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) { .contact-folders { justify-content: center; } }
+
+    .contact-folder {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blush);
+      color: var(--ink);
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: var(--shadow);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .contact-folder:hover {
+      transform: translateY(-3px);
+      background: var(--paper);
+      color: var(--accent);
+    }
+
+    .contact-line {
+      font-size: 14.5px;
+      color: #d8cdd0;
+      margin-top: 28px;
+    }
+
+    .contact-line strong {
+      color: var(--paper);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #a89195;
+      background: var(--ink);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ---------- scroll-in animation (progressive enhancement) ---------- */
+    .will-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .will-animate.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- responsive nav ---------- */
+    @media (max-width: 720px) {
+      .nav {
+        padding: 16px 24px;
+      }
+      .nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--paper);
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0;
+        gap: 20px;
+        display: none;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      }
+      .nav ul.open { display: flex; }
+      .nav-toggle { display: block; }
+      .hero { padding: 120px 24px 60px; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-text .eyebrow { justify-content: center; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .hero-text h1 { font-size: 56px; }
+      .hero-photo { margin: 0 auto; width: 280px; height: 350px; }
+      .doodle { display: none; }
+      .contact-text .script-lg { font-size: 40px; }
+      .section-head h2 { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stamp-bg">Melbourne Edition ★ 2026</div>
+
+  <!-- ---------- NAV ---------- -->
+  <header class="nav" id="mainNav">
+    <a href="#" class="brand">Anureet Sodhi</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#folders">Index</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#toolkit">Toolkit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- ---------- HERO / VISION BOARD ---------- -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <div class="hero-text will-animate">
+          <div class="eyebrow">
+            <i class="fa-solid fa-sparkles"></i> Creative Designer &amp; Brand Strategist
+          </div>
+          <h1>Anureet Sodhi</h1>
+          <p class="tagline">
+            Creative Designer crafting eye-pleasing visual identities, digital experiences, editorial layouts, and high-impact brand systems.
+          </p>
+          <a href="#work" class="hero-cta">
+            Explore Creative Work <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+        </div>
+
+        <div class="hero-photo-wrap will-animate">
+          <!-- Doodle labels around portrait -->
+          <div class="doodle d1">🎨 Creative Designer</div>
+          <div class="doodle d2">💡 Visual Storyteller</div>
+          <div class="doodle d3">📐 UI/UX &amp; Brand Systems</div>
+          <div class="doodle d4">✨ Editorial &amp; Packaging</div>
+          <div class="doodle d5">☕ Fueled by Chai</div>
+          <div class="doodle d6">📍 Melbourne, AU</div>
+
+          <!-- Hand-drawn SVG doodle arrow pointing to portrait -->
+          <svg class="doodle-arrow" style="top: -25px; left: -10px; width: 60px; height: 60px;" viewBox="0 0 100 100" fill="none" stroke="#c9748c" stroke-width="3" stroke-linecap="round">
+            <path d="M 20 80 Q 50 10, 80 50 A 1 1 0 0 1 70 70" />
+            <polygon points="75,45 85,55 70,60" fill="#c9748c" />
+          </svg>
+
+          <div class="hero-photo">
+            <!-- Scrapbook style portrait SVG illustration / image -->
+            <svg class="hero-photo-img" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="500" fill="#F3C9D4"/>
+              <circle cx="200" cy="180" r="110" fill="#FAF3EE"/>
+              <path d="M200 90C140 90 120 150 120 200C120 240 145 280 200 280C255 280 280 240 280 200C280 150 260 90 200 90Z" fill="#372B2E"/>
+              <circle cx="200" cy="190" r="65" fill="#FAD6C5"/>
+              <!-- Hair details -->
+              <path d="M135 180C130 130 160 100 200 100C240 100 270 130 265 180C265 195 255 220 255 240C240 220 230 210 200 210C170 210 160 220 145 240C145 220 135 195 135 180Z" fill="#251C1E"/>
+              <!-- Eyes & Smile -->
+              <circle cx="180" cy="190" r="5" fill="#372B2E"/>
+              <circle cx="220" cy="190" r="5" fill="#372B2E"/>
+              <path d="M185 212 Q 200 225, 215 212" stroke="#B3536C" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <!-- Cheeks -->
+              <circle cx="168" cy="202" r="8" fill="#E2A1B3" opacity="0.6"/>
+              <circle cx="232" cy="202" r="8" fill="#E2A1B3" opacity="0.6"/>
+              <!-- Outfit / Torso -->
+              <path d="M110 500 C110 360, 140 310, 200 310 C260 310, 290 360, 290 500 Z" fill="#C9748C"/>
+              <path d="M170 310 L200 360 L230 310 Z" fill="#FAF3EE"/>
+              <!-- Sparkles -->
+              <path d="M80 80 L85 95 L100 100 L85 105 L80 120 L75 105 L60 100 L75 95 Z" fill="#FFF"/>
+              <path d="M320 120 L323 130 L335 133 L323 136 L320 146 L317 136 L305 133 L317 130 Z" fill="#FFF"/>
+              <path d="M310 380 L315 390 L325 393 L315 396 L310 406 L305 396 L295 393 L305 390 Z" fill="#FAF3EE"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- INDEX / FOLDERS ---------- -->
+    <section class="page-section" id="folders">
+      <div class="wrap">
+        <div class="section-head will-animate">
+          <div class="kicker">Portfolio Navigator</div>
+          <h2>Interactive Folders</h2>
+          <div class="sub">Click any tab to jump directly to that chapter</div>
+        </div>
+
+        <div class="index-grid will-animate">
+          <a href="#education" class="folder f-edu">
+            <div class="folder-icon">
+              <div class="tab"></div>
+              <div class="body"><i class="fa-solid fa-graduation-cap"></i></div>
+            </div>
+            <div class="folder-label">01. Education</div>
+          </a>
+
+          <a href="#work" class="folder f-work">
+            <div class="folder-icon">
+              <div class="tab"></div>
+              <div class="body"><i class="fa-solid fa-palette"></i></div>
+            </div>
+            <div class="folder-label">02. Creative Work</div>
+          </a>
+
+          <a href="#skills" class="folder f-skills">
+            <div class="folder-icon">
+              <div class="tab"></div>
+              <div class="body"><i class="fa-solid fa-pen-nib"></i></div>
+            </div>
+            <div class="folder-label">03. Design Skills</div>
+          </a>
+
+          <a href="#toolkit" class="folder f-tools">
+            <div class="folder-icon">
+              <div class="tab"></div>
+              <div class="body"><i class="fa-solid fa-toolbox"></i></div>
+            </div>
+            <div class="folder-label">04. Creative Stack</div>
+          </a>
+
+          <a href="#contact" class="folder f-contact">
+            <div class="folder-icon">
+              <div class="tab"></div>
+              <div class="body"><i class="fa-solid fa-paper-plane"></i></div>
+            </div>
+            <div class="folder-label">05. Let's Connect</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- EDUCATION & CERTIFICATIONS ---------- -->
+    <section class="page-section" id="education">
+      <div class="wrap">
+        <div class="section-head will-animate">
+          <div class="kicker">Background &amp; Expertise</div>
+          <h2>Education &amp; Credentials</h2>
+          <div class="sub">The foundations of thoughtful design &amp; brand strategy</div>
+        </div>
+
+        <div class="edu-cards">
+          <div class="edu-card will-animate">
+            <div class="tape"></div>
+            <div class="when">2020 — 2024</div>
+            <h3>Bachelor of Design &amp; Brand Strategy</h3>
+            <p>
+              Specialized in Visual Identity Systems, Typography Architecture, Editorial Layouts, and Digital UI/UX. Graduated with Honors. Led real-world brand redesign projects for lifestyle and wellness companies.
+            </p>
+          </div>
+
+          <div class="edu-card cert-card will-animate">
+            <div class="tape right"></div>
+            <div class="when">Continuous Growth</div>
+            <h3>Specialized Design Certifications</h3>
+            <p>
+              Up-to-date mastery in digital prototyping, visual branding, and design tools:
+            </p>
+            <div class="cert-list">
+              <div class="cert-badge"><i class="fa-brands fa-figma"></i> Advanced UI/UX &amp; Prototyping</div>
+              <div class="cert-badge"><i class="fa-solid fa-palette"></i> Adobe Creative Cloud Specialist</div>
+              <div class="cert-badge"><i class="fa-solid fa-layer-group"></i> Visual Systems &amp; Typography</div>
+              <div class="cert-badge"><i class="fa-brands fa-shopify"></i> E-Commerce Brand Styling</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CREATIVE WORK / CASE STUDIES ---------- -->
+    <section class="page-section" id="work">
+      <div class="wrap">
+        <div class="section-head will-animate">
+          <div class="kicker">Featured Portfolio</div>
+          <h2>Creative Projects</h2>
+          <div class="sub">Visual identity systems, editorial packaging &amp; digital designs</div>
+        </div>
+
+        <div class="binder-title will-animate">
+          <div class="label">Design Case Studies</div>
+          <div class="role">Lead Creative Designer &amp; Visual Brand Strategist</div>
+        </div>
+
+        <div class="case-grid">
+          <!-- Case 1 -->
+          <div class="case-card will-animate">
+            <div class="case-photo">
+              <svg viewBox="0 0 600 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="375" fill="#F3C9D4"/>
+                <circle cx="300" cy="187" r="120" fill="#FFF" opacity="0.6"/>
+                <path d="M 150 280 C 220 180, 380 180, 450 280" stroke="#C9748C" stroke-width="4" fill="none"/>
+                <text x="300" y="175" font-family="Cormorant Garamond" font-size="32" font-weight="600" fill="#372B2E" text-anchor="middle">LUXE AURA BEAUTY</text>
+                <text x="300" y="210" font-family="Caveat" font-size="22" fill="#B3536C" text-anchor="middle">Brand Identity &amp; Packaging Design</text>
+              </svg>
+              <div class="case-photo-overlay">
+                <span>✨ Packaging &amp; Brand System</span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="brand-chip">Brand Identity</span>
+              <h4>Luxe Aura Skincare Branding</h4>
+              <p>Designed a sophisticated visual identity, custom typography suite, and sustainable packaging design for a premium boutique beauty brand.</p>
+              <ul>
+                <li>Created full brand guidelines book and color palette</li>
+                <li>Designed 12+ custom packaging mockups and print collateral</li>
+              </ul>
+              <div class="case-metrics">
+                <div class="metric-item">
+                  <div class="metric-value">12+</div>
+                  <div class="metric-label">Packaging Units</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-value">100%</div>
+                  <div class="metric-label">Bespoke System</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="case-card will-animate">
+            <div class="case-photo">
+              <svg viewBox="0 0 600 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="375" fill="#E2A1B3"/>
+                <rect x="100" y="80" width="400" height="215" rx="12" fill="#FAF3EE" opacity="0.9"/>
+                <text x="300" y="165" font-family="Cormorant Garamond" font-size="32" font-weight="600" fill="#372B2E" text-anchor="middle">VEDA ORGANICS</text>
+                <text x="300" y="200" font-family="Caveat" font-size="22" fill="#B3536C" text-anchor="middle">Social Media &amp; Content System</text>
+              </svg>
+              <div class="case-photo-overlay">
+                <span>🌿 Creative Direction &amp; Content</span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="brand-chip alt">Creative Direction</span>
+              <h4>Veda Organics Social Design</h4>
+              <p>Developed an engaging Instagram &amp; TikTok visual design language, carousel templates, and motion graphic assets for organic community growth.</p>
+              <ul>
+                <li>Built a library of 50+ reusable Figma design components</li>
+                <li>Elevated brand aesthetic across all digital touchpoints</li>
+              </ul>
+              <div class="case-metrics">
+                <div class="metric-item">
+                  <div class="metric-value">50+</div>
+                  <div class="metric-label">Design Assets</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-value">3.2M</div>
+                  <div class="metric-label">Visual Reach</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="case-card will-animate">
+            <div class="case-photo">
+              <svg viewBox="0 0 600 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="375" fill="#C9748C"/>
+                <circle cx="200" cy="187" r="90" fill="#FAF3EE" opacity="0.4"/>
+                <circle cx="400" cy="187" r="90" fill="#FAF3EE" opacity="0.4"/>
+                <text x="300" y="175" font-family="Cormorant Garamond" font-size="32" font-weight="600" fill="#FFF" text-anchor="middle">AURA APPAREL</text>
+                <text x="300" y="210" font-family="Caveat" font-size="22" fill="#FAF3EE" text-anchor="middle">UI/UX E-Commerce Experience</text>
+              </svg>
+              <div class="case-photo-overlay">
+                <span>👗 UI/UX &amp; Web Design</span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="brand-chip gold">UI/UX &amp; E-Com</span>
+              <h4>Aura Apparel Web Redesign</h4>
+              <p>Reimagined the mobile-first e-commerce shopping experience in Figma, crafting high-converting product pages, lookbooks, and micro-interactions.</p>
+              <ul>
+                <li>Conducted user research and interactive wireframing</li>
+                <li>Delivered responsive desktop &amp; mobile UI Figma specs</li>
+              </ul>
+              <div class="case-metrics">
+                <div class="metric-item">
+                  <div class="metric-value">Figma</div>
+                  <div class="metric-label">Full Prototype</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-value">+28%</div>
+                  <div class="metric-label">User Engagement</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 4 -->
+          <div class="case-card will-animate">
+            <div class="case-photo">
+              <svg viewBox="0 0 600 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="375" fill="#372B2E"/>
+                <rect x="80" y="60" width="440" height="255" rx="10" stroke="#F3C9D4" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+                <text x="300" y="165" font-family="Cormorant Garamond" font-size="32" font-weight="600" fill="#F3C9D4" text-anchor="middle">BLOOM TECH SUMMIT</text>
+                <text x="300" y="200" font-family="Caveat" font-size="22" fill="#FAF3EE" text-anchor="middle">Event Branding &amp; Collateral</text>
+              </svg>
+              <div class="case-photo-overlay">
+                <span>🎟️ Event Identity &amp; Merch</span>
+              </div>
+            </div>
+            <div class="case-body">
+              <span class="brand-chip">Event Branding</span>
+              <h4>Bloom Summit Event Identity</h4>
+              <p>Crafted the complete visual branding system for a 1,200+ attendee conference, including stage backdrops, event badges, signage, and digital promo assets.</p>
+              <ul>
+                <li>Designed physical signage, lanyards, and merchandise</li>
+                <li>Created social media ad banners &amp; email header graphics</li>
+              </ul>
+              <div class="case-metrics">
+                <div class="metric-item">
+                  <div class="metric-value">1,200+</div>
+                  <div class="metric-label">Attendees</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-value">Print/Digital</div>
+                  <div class="metric-label">Full Suite</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section class="page-section" id="skills">
+      <div class="wrap">
+        <div class="section-head will-animate">
+          <div class="kicker">Core Competencies</div>
+          <h2>Design Skills</h2>
+          <div class="sub">Crafting eye-pleasing aesthetic systems</div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-card will-animate">
+            <h3><i class="fa-solid fa-palette"></i> Brand Identity &amp; Visuals</h3>
+            <ul>
+              <li><span>Visual Identity Systems &amp; Logo Suites</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Typography Architecture &amp; Font Pairing</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Color Palette &amp; Moodboard Creation</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Editorial Layout &amp; Packaging Design</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Brand Guidelines &amp; Style Systems</span> <i class="fa-solid fa-check"></i></li>
+            </ul>
+          </div>
+
+          <div class="skills-card will-animate">
+            <h3><i class="fa-solid fa-laptop-code"></i> Digital &amp; UI/UX Design</h3>
+            <ul>
+              <li><span>UI/UX Interface &amp; Web Layouts</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Figma Prototyping &amp; Wireframing</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Social Media Creative &amp; Ad Banners</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>E-Commerce Visual Design (Shopify)</span> <i class="fa-solid fa-check"></i></li>
+              <li><span>Design Systems &amp; Asset Libraries</span> <i class="fa-solid fa-check"></i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="applied-note will-animate">
+          <i class="fa-solid fa-quote-left"></i>
+          Blending intuitive aesthetics with structured design thinking to create visual stories that resonate deeply and convert effortlessly.
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- TOOLKIT ---------- -->
+    <section class="page-section" id="toolkit">
+      <div class="wrap">
+        <div class="section-head will-animate">
+          <div class="kicker">Creative Software</div>
+          <h2>Design Stack</h2>
+          <div class="sub">Tools I use daily to bring ideas to life</div>
+        </div>
+
+        <div class="tool-grid will-animate">
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-brands fa-figma"></i></div>
+            <div class="name">Figma</div>
+            <div class="desc">UI/UX &amp; Systems</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-pen-nib"></i></div>
+            <div class="name">Illustrator</div>
+            <div class="desc">Vectors &amp; Brand Logos</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-image"></i></div>
+            <div class="name">Photoshop</div>
+            <div class="desc">Photo Editing &amp; Mockups</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-book-open"></i></div>
+            <div class="name">InDesign</div>
+            <div class="desc">Editorial &amp; Print Books</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-brands fa-shopify"></i></div>
+            <div class="name">Shopify</div>
+            <div class="desc">Visual Store Styling</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="name">Canva Pro</div>
+            <div class="desc">Rapid Creative Mockups</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="name">Procreate</div>
+            <div class="desc">Hand Illustrations</div>
+          </div>
+
+          <div class="tool-stamp">
+            <div class="badge"><i class="fa-solid fa-database"></i></div>
+            <div class="name">Notion</div>
+            <div class="desc">Design System Docs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <div class="contact-photo will-animate">
+          <!-- Scrapbook style contact portrait SVG illustration -->
+          <svg viewBox="0 0 350 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="350" height="440" fill="#F3C9D4"/>
+            <circle cx="175" cy="160" r="95" fill="#FAF3EE"/>
+            <path d="M175 80C125 80 110 135 110 180C110 215 130 250 175 250C220 250 240 215 240 180C240 135 225 80 175 80Z" fill="#372B2E"/>
+            <circle cx="175" cy="170" r="55" fill="#FAD6C5"/>
+            <!-- Eyes & Smile -->
+            <circle cx="158" cy="170" r="4" fill="#372B2E"/>
+            <circle cx="192" cy="170" r="4" fill="#372B2E"/>
+            <path d="M162 188 Q 175 198, 188 188" stroke="#B3536C" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <!-- Torso / Outfit -->
+            <path d="M90 440 C90 320, 120 280, 175 280 C230 280, 260 320, 260 440 Z" fill="#6B585D"/>
+            <path d="M150 280 L175 320 L200 280 Z" fill="#F3C9D4"/>
+            <!-- Sparkles -->
+            <path d="M60 60 L64 72 L76 76 L64 80 L60 92 L56 80 L44 76 L56 72 Z" fill="#FFF"/>
+            <path d="M280 90 L283 98 L293 101 L283 104 L280 112 L277 104 L267 101 L277 98 Z" fill="#FAF3EE"/>
+          </svg>
+        </div>
+
+        <div class="contact-text will-animate">
+          <div class="script-lg">Let's Create Magic Together!</div>
+          <p class="intro">
+            Whether you're launching a brand identity, designing a digital experience, or looking for a creative design partner — let's build something beautiful.
+          </p>
+
+          <div class="contact-folders">
+            <a href="mailto:anureetsodh2021@gmail.com" class="contact-folder">
+              <i class="fa-solid fa-paper-plane"></i> Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/anureet-sodhi-026666274/" target="_blank" rel="noopener" class="contact-folder">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Abhinavv-007/Anureet/blob/main/ANUREET%20SODHI%20_%20RESUME.pdf" target="_blank" rel="noopener" class="contact-folder">
+              <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
+            </a>
+          </div>
+
+          <div class="contact-line">
+            Based in <strong>Melbourne, Australia</strong> &amp; Available for full-time roles or freelance brand consulting worldwide.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Anureet Sodhi — Designed with ❤️ &amp; Scrapbook Inspiration. All Rights Reserved.
+  </footer>
+
+  <!-- ---------- INTERACTIVE JS ---------- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Nav Toggle
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const mainNav = document.getElementById('mainNav');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+          const icon = navToggle.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+          }
+        });
+
+        // Close menu on link click
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+              icon.classList.add('fa-bars');
+              icon.classList.remove('fa-xmark');
+            }
+          });
+        });
+      }
+
+      // Nav Scroll Shadow effect & active link highlighting
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          mainNav.classList.add('scrolled');
+        } else {
+          mainNav.classList.remove('scrolled');
+        }
+
+        // Active link scroll spy
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 200;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          const navLink = document.querySelector(`.nav a[href="#${sectionId}"]`);
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+            if (navLink) navLink.classList.add('active');
+          }
+        });
+      });
+
+      // Intersection Observer for scroll-in animations
+      const animatedElements = document.querySelectorAll('.will-animate');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      animatedElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

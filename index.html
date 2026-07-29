@@ -322,46 +322,40 @@
     .doodle {
       position: absolute;
       font-family: var(--font-handwrite);
-      font-size: 22px;
+      font-size: 24px;
+      font-weight: 700;
       color: var(--ink);
       white-space: nowrap;
       pointer-events: none;
       z-index: 2;
+      background: rgba(255, 250, 246, 0.95);
+      padding: 4px 12px;
+      border-radius: 10px;
+      border: 1.5px dashed var(--blush-deep);
+      box-shadow: 0 4px 15px rgba(179, 83, 108, 0.15);
     }
 
     .doodle.d1 {
-      top: 4%;
-      left: -4%;
-      transform: rotate(-8deg);
-    }
-
-    .doodle.d2 {
-      top: 12%;
-      right: -2%;
-      transform: rotate(6deg);
-    }
-
-    .doodle.d3 {
-      top: 48%;
-      left: -6%;
-      transform: rotate(-4deg);
-    }
-
-    .doodle.d4 {
-      bottom: 18%;
-      left: 2%;
-      transform: rotate(5deg);
-    }
-
-    .doodle.d5 {
-      bottom: 6%;
-      right: -4%;
+      top: -15px;
+      left: -20px;
       transform: rotate(-6deg);
     }
 
+    .doodle.d5 {
+      top: -15px;
+      right: -20px;
+      transform: rotate(6deg);
+    }
+
+    .doodle.d-boba {
+      bottom: 22%;
+      left: -28px;
+      transform: rotate(-5deg);
+    }
+
     .doodle.d6 {
-      top: 72%;
-      right: -6%;
+      bottom: -15px;
+      right: -15px;
       transform: rotate(4deg);
     }
 
@@ -1143,15 +1137,14 @@
         </div>
         <div class="hero-photo-wrap will-animate">
           <div class="doodle d1">campaign planning &rarr;</div>
-          <div class="doodle d3">&larr; ASOS x Levi&rsquo;s</div>
-          <div class="doodle d4">UIUC certified &#10003;</div>
-          <div class="doodle d5">brand positioning</div>
+          <div class="doodle d5">brand positioning ✨</div>
+          <div class="doodle d-boba">loves boba &#129483;</div>
           <div class="doodle d6">&#128205; Melbourne</div>
 
-          <svg class="doodle-arrow" style="top: -25px; left: -10px; width: 60px; height: 60px;" viewBox="0 0 100 100"
-            fill="none" stroke="#c9748c" stroke-width="3" stroke-linecap="round">
-            <path d="M 20 80 Q 50 10, 80 50 A 1 1 0 0 1 70 70" />
-            <polygon points="75,45 85,55 70,60" fill="#c9748c" />
+          <svg class="doodle-arrow" style="top: 25px; left: 110px; width: 45px; height: 45px;" viewBox="0 0 100 100"
+            fill="none" stroke="#c9748c" stroke-width="4" stroke-linecap="round">
+            <path d="M 10 20 Q 50 10, 80 60" />
+            <polygon points="70,60 88,72 82,50" fill="#c9748c" />
           </svg>
 
           <div class="hero-photo">

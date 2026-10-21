@@ -8,7 +8,7 @@
   <meta name="description"
     content="Anureet Sodhi's Marketing Portfolio — BCom Marketing student at the University of Melbourne, building campaigns, mood boards, and brand experiences.">
   <meta name="keywords"
-    content="Anureet Sodhi, Marketing Portfolio, Marketing Student, Brand Strategy, University of Melbourne, ASOS, Levi's, Melbourne">
+    content="Anureet Sodhi, Marketing Portfolio, Marketing Student, Brand Strategy, University of Melbourne, Embrace Education, ASOS, Levi's, Melbourne">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Anureet Sodhi — Marketing Portfolio">
@@ -466,7 +466,8 @@
       --folder-color: #f3c9d4;
     }
 
-    .folder.f-work {
+    .folder.f-work,
+    .folder.f-exp {
       --folder-color: #e2a1b3;
     }
 
@@ -583,7 +584,31 @@
       gap: 6px;
     }
 
-    /* ---------- AGENCY WORK ---------- */
+    /* ---------- EXPERIENCE ---------- */
+    .featured-case {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 1.25fr;
+    }
+
+    .featured-case .case-photo {
+      height: 100%;
+      min-height: 320px;
+      aspect-ratio: auto;
+    }
+
+    @media (max-width: 860px) {
+      .featured-case {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-case .case-photo {
+        aspect-ratio: 16 / 10;
+        min-height: auto;
+      }
+    }
+
     .binder-title {
       max-width: 720px;
       margin: 0 auto 40px;
@@ -1115,7 +1140,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#folders">Index</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#work">Agency Work</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#toolkit">Toolkit</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1133,7 +1158,7 @@
             BCom Marketing student at the University of Melbourne who turns brand briefs into mood boards, pop-ups, and
             campaigns people actually remember.
           </p>
-          <a href="#work" class="hero-cta">See My Work <i class="fa-solid fa-arrow-down-long"></i></a>
+          <a href="#experience" class="hero-cta">See My Experience <i class="fa-solid fa-arrow-down-long"></i></a>
         </div>
         <div class="hero-photo-wrap will-animate">
           <div class="doodle d1">campaign planning &rarr;</div>
@@ -1171,12 +1196,12 @@
             </div>
             <div class="folder-label">01. Education</div>
           </a>
-          <a href="#work" class="folder f-work">
+          <a href="#experience" class="folder f-work">
             <div class="folder-icon">
               <div class="tab"></div>
               <div class="body"><i class="fa-solid fa-bullhorn"></i></div>
             </div>
-            <div class="folder-label">02. Agency Work</div>
+            <div class="folder-label">02. Experience</div>
           </a>
           <a href="#skills" class="folder f-skills">
             <div class="folder-icon">
@@ -1243,17 +1268,44 @@
       </div>
     </section>
 
-    <!-- ---------- AGENCY WORK ---------- -->
-    <section class="page-section" id="work">
+    <!-- ---------- EXPERIENCE ---------- -->
+    <section class="page-section" id="experience">
+      <div id="work" style="position: absolute; top: -80px;"></div>
       <div class="wrap">
         <div class="section-head will-animate">
-          <div class="kicker">Featured Experience</div>
-          <h2>Agency Work</h2>
-          <div class="sub">Real campaigns, real clients, real mood boards</div>
+          <div class="kicker">Featured Background</div>
+          <h2>Experience</h2>
+          <div class="sub">Leadership roles, real campaigns, and hands-on brand building</div>
         </div>
 
+        <!-- Experience 1: Embrace Education -->
         <div class="binder-title will-animate">
-          <div class="label">Internship</div>
+          <div class="label">Leadership &bull; Tutoring Organisation</div>
+          <div class="role">Marketing Director &mdash; Embrace Education</div>
+        </div>
+
+        <div class="case-card featured-case will-animate">
+          <div class="case-photo">
+            <!-- Replace images/embrace-education.jpg with your own project photo -->
+            <img src="images/embrace-education.jpg" alt="Embrace Education brand and marketing campaign board">
+            <div class="case-photo-overlay"><span>Community &amp; Brand Growth</span></div>
+          </div>
+          <div class="case-body">
+            <span class="brand-chip alt">Embrace Education &mdash; Leadership</span>
+            <h4>Marketing Director &bull; Brand Exposure &amp; Reach</h4>
+            <p>As Marketing Director at Embrace Education, a tutoring organisation that helps students build confidence and achieve their academic goals, I lead marketing with a focus on growing brand exposure and reach. I’ve developed strategies to put Embrace in front of new students and families across social and on-ground channels. I’ve also introduced fresh, engaging events that get people talking and keep the community coming back. From planning campaigns to bringing events to life, my goal is to make Embrace a more visible, trusted name that students actively seek out.</p>
+            <div class="case-tags">
+              <span class="case-tag">Brand Exposure</span>
+              <span class="case-tag">Social &amp; On-Ground</span>
+              <span class="case-tag">Community Events</span>
+              <span class="case-tag">Campaign Planning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Event Management Company Internship -->
+        <div class="binder-title will-animate" style="margin-top: 60px;">
+          <div class="label">Internship &bull; Event Management Company</div>
           <div class="role">Marketing Intern, Event Management Company</div>
         </div>
 
